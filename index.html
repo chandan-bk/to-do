@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Todo List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>My Todo List</h1>
+        <p class="intro">Things I need to do today</p>
+
+        <form id="taskForm">
+            <input id="taskInput" type="text" placeholder="Enter a task" autocomplete="off" required>
+            <button type="submit">Add</button>
+        </form>
+
+        <div class="task-options">
+            <button class="filter-button active" data-filter="all" type="button">All</button>
+            <button class="filter-button" data-filter="active" type="button">Not done</button>
+            <button class="filter-button" data-filter="completed" type="button">Done</button>
+        </div>
+
+        <ul id="taskList"></ul>
+        <p class="empty-message" id="emptyMessage">No tasks yet. Add one above!</p>
+
+        <div class="bottom">
+            <span><strong id="remainingCount">0</strong> tasks left</span>
+            <button id="clearCompleted" type="button">Clear done tasks</button>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

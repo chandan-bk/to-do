@@ -1,0 +1,147 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 30px 15px;
+    font-family: Arial, sans-serif;
+    background-color: #e8eef5;
+    color: #333;
+}
+
+.container {
+    width: 100%;
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 25px;
+    background-color: white;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+}
+
+h1 {
+    margin: 0;
+    color: #234b73;
+    text-align: center;
+}
+
+.intro {
+    margin: 8px 0 25px;
+    color: #687686;
+    text-align: center;
+}
+
+#taskForm {
+    display: flex;
+    gap: 8px;
+}
+
+#taskInput {
+    flex: 1;
+    padding: 11px;
+    border: 1px solid #aab7c4;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+button {
+    padding: 10px 14px;
+    color: white;
+    background-color: #3978b8;
+    border: 0;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #2d6094;
+}
+
+.task-options {
+    display: flex;
+    gap: 6px;
+    margin: 20px 0 12px;
+}
+
+.filter-button {
+    padding: 7px 11px;
+    color: #555;
+    background-color: #edf1f5;
+}
+
+.filter-button.active {
+    color: white;
+    background-color: #3978b8;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 13px 4px;
+    border-bottom: 1px solid #e1e5e9;
+}
+
+li span {
+    flex: 1;
+    word-break: break-word;
+}
+
+li.done span {
+    color: #89939d;
+    text-decoration: line-through;
+}
+
+li button {
+    padding: 6px 8px;
+    color: #a33d3d;
+    background-color: #f8e7e7;
+    font-size: 12px;
+}
+
+li button:hover {
+    background-color: #f1caca;
+}
+
+.empty-message {
+    padding: 15px;
+    color: #777;
+    text-align: center;
+}
+
+.bottom {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    color: #687686;
+    font-size: 14px;
+}
+
+#clearCompleted {
+    padding: 0;
+    color: #3978b8;
+    background: none;
+}
+
+@media (max-width: 450px) {
+    #taskForm {
+        flex-direction: column;
+    }
+
+    #taskForm button {
+        width: 100%;
+    }
+
+    .bottom {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 10px;
+    }
+}
